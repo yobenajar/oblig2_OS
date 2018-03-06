@@ -13,9 +13,6 @@ function meny {
 	echo "9 - Avslutt dette scriptet"
 }
 
-# ******************************* "MAIN" **************************************
-
-
 function contextswitch {
 	switch1=$(grep ctxt /proc/stat | awk '{print $2}')
 	sleep 1
@@ -47,6 +44,8 @@ function cpuTid {
 	echo "$((user*prosent)) % av det siste sekundet til usermode"
 	echo "$((kernel*prosent)) % av det siste sekundet til kernelmode"
 }
+
+# ******************************* "MAIN" **************************************
 
 meny
 while [ "$tall" != 9 ] 
